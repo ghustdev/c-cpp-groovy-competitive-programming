@@ -9,11 +9,19 @@ const int MAX = 2e5;
 
 void solve()
 {
-    float x; cin >> x;
+    ll n; cin >> n;
 
-    if (x >= 38) cout << "1";
-    else if (x >= 37.5 && x < 38) cout << "2";
-    else if (x < 37.5) cout << "3";
+    cout << n; 
+
+    while (n != 1) {
+        if (n % 2 == 0) {
+            n = n/2;
+            cout << " " << n;
+        } else {
+            n = n * 3 + 1;
+            cout << " " << n;
+        }
+    }
 }
 
 int main()

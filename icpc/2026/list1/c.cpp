@@ -9,11 +9,23 @@ const int MAX = 2e5;
 
 void solve()
 {
-    float x; cin >> x;
+    int n; cin >> n;
 
-    if (x >= 38) cout << "1";
-    else if (x >= 37.5 && x < 38) cout << "2";
-    else if (x < 37.5) cout << "3";
+    vector<ll> v(n);
+    ll moves = 0;
+
+    for (int i = 0; i < n; i++) {
+        cin >> v[i];
+    }
+    
+    for (int i = 1; i < n; i++) {
+        if (v[i] < v[i-1]) {
+            moves += v[i-1] - v[i];
+            v[i] = v[i-1];
+        }
+    }
+
+    cout << moves;
 }
 
 int main()

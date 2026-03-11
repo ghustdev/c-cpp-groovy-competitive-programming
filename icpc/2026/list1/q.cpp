@@ -9,11 +9,13 @@ const int MAX = 2e5;
 
 void solve()
 {
-    float x; cin >> x;
+    int a, b, c; cin >> a >> b >> c;
 
-    if (x >= 38) cout << "1";
-    else if (x >= 37.5 && x < 38) cout << "2";
-    else if (x < 37.5) cout << "3";
+    if (a == b || b == c || a == c) {
+        cout << "Yes";
+    } else {
+        cout << "No";  
+    }
 }
 
 int main()

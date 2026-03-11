@@ -9,11 +9,10 @@ const int MAX = 2e5;
 
 void solve()
 {
-    float x; cin >> x;
+    int a, b, c, d; cin >> a >> b >> c >> d;
 
-    if (x >= 38) cout << "1";
-    else if (x >= 37.5 && x < 38) cout << "2";
-    else if (x < 37.5) cout << "3";
+    cout << (a + b) * (c - d) << endl;
+    cout << "Takahashi";
 }
 
 int main()
