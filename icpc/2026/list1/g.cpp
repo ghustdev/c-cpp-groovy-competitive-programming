@@ -9,7 +9,10 @@ const int MAX = 2e5;
 
 void solve()
 {
-    int n; cin >> n;
+    int n, m; cin >> n >> m;
+
+    if (ceil(double(n) / 2) >= m) cout << "Yes" << endl;
+    else cout << "No" << endl;
 }
 
 int main()
