@@ -1,3 +1,6 @@
+// Gustavo Cardoso Costa
+// =====================
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -459,4 +462,55 @@ struct NO* searchFather(ArvBin *raiz, int el)
 	}
 
 	return NULL;
+}
+
+int consultaIntervalarArvBinIter(ArvBin *raiz, int valorBuscado, int *infoAchada, int *valorAnt, int *valorPost)
+{
+	if (raiz == NULL || *raiz == NULL)
+		return 0;
+
+	struct NO *atual = *raiz;
+	struct NO *ant = NULL;  // ultimo NO onde fomos para direita (predecessor)
+	struct NO *post = NULL; // ultimo NO onde fomos para esquerda (sucessor)
+
+	while (atual != NULL) {
+		if (valorBuscado == atual->info) {
+			*infoAchada = atual->info;
+			return 1;
+		}
+		if (valorBuscado > atual->info) {
+			ant = atual;
+			atual = atual->dir;
+		} else {
+			post = atual;
+			atual = atual->esq;
+		}
+	}
+	if (ant != NULL)  *valorAnt  = ant->info;
+	if (post != NULL) *valorPost = post->info;
+	return 0;
+}
+
+int consultaIntervalarRec(struct NO *atual, int valorBuscado, int *infoAchada, int *valorAnt, int *valorPost)
+{
+	if (atual == NULL)
+		return 0;
+	if (valorBuscado == atual->info) {
+		*infoAchada = atual->info;
+		return 1;
+	}
+	if (valorBuscado > atual->info) {
+		*valorAnt = atual->info;
+		return consultaIntervalarRec(atual->dir, valorBuscado, infoAchada, valorAnt, valorPost);
+	} else {
+		*valorPost = atual->info;
+		return consultaIntervalarRec(atual->esq, valorBuscado, infoAchada, valorAnt, valorPost);
+	}
+}
+
+int consultaIntervalarArvBinRec(ArvBin *raiz, int valorBuscado, int *infoAchada, int *valorAnt, int *valorPost)
+{
+	if (raiz == NULL || *raiz == NULL)
+		return 0;
+	return consultaIntervalarRec(*raiz, valorBuscado, infoAchada, valorAnt, valorPost);
 }

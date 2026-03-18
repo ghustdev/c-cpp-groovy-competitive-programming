@@ -1,6 +1,8 @@
 // Gustavo Cardoso Costa
 // =====================
 
+// Compilar e executar: gcc TestaArvoreBinaria.c ArvoreBinaria.c Fila.c -o teste && ./teste
+
 #include <stdio.h>
 #include <stdlib.h>
 #include "ArvoreBinaria.h"
@@ -77,6 +79,7 @@ int main()
 	libera_ArvBin(raiz);
 
 	printf("\n\nPressione alguma tecla para encerrar!\n");
+	scanf(NULL);
 	system("pause > nul");
 	
 	return 0;
