@@ -1,0 +1,131 @@
+AED2 - Exercícios de fixação (NÃO DEVEM SER ENTREGUES)
+
+1. Dadas as árvores binárias adiante, apresente os resultados de travessias: PRÉ-ORDEM, EM ORDEM, PÓS-ORDEM.
+
+a)
+      10
+     /  \
+    5    15
+   /      \
+  3       20
+
+Pré-ordem:
+Em ordem :
+Pós-ordem:
+
+
+b)
+      8
+     / \
+    4   12
+   / \   \
+  2   6   14
+ /       /
+1       13
+
+Pré-ordem:
+Em ordem :
+Pós-ordem:
+
+
+c)
+       15
+      /  \
+     7    25
+    / \   / \
+   3   9 20  30
+  /       \
+ 1        22
+
+Pré-ordem:
+Em ordem :
+Pós-ordem:
+
+
+d)
+       20
+      /  \
+     10   30
+    /  \   / \
+   5   15 25  35
+  / \   \
+ 2   7  17
+
+Pré-ordem:
+Em ordem :
+Pós-ordem:
+
+
+e)      
+         50
+        /  \
+       30   70
+      /  \   / \
+     20  40 60  80
+    /   /  \    / \
+   10  35  45  75  90
+  / \      /
+ 5   15   42
+
+Pré-ordem:
+Em ordem :
+Pós-ordem:
+
+
+f)
+
+      5
+     / \
+    8   3   
+   / \   \
+  10  6   4
+ /       /
+9       2
+
+Pré-ordem:
+Em ordem :
+Pós-ordem:
+
+
+g) 
+       12
+      /  \
+     7    20
+    / \   / \
+   9   3 15  25 (9 > 7 à esquerda, viola BST)
+  /       \
+ 1        18
+
+Pré-ordem:
+Em ordem :
+Pós-ordem:
+
+
+h) 
+       25
+      /  \
+     15   30
+    /  \   / \
+   20  10 35  40
+  / \   \
+ 5   8   12
+
+Pré-ordem:
+Em ordem :
+Pós-ordem:
+
+
+i) 
+         40
+        /  \
+       60   20
+      /  \   / \
+     50  70 10  30
+    /   /  \    / \
+   45  65  75  25  35
+  / \      /
+ 42  47   72
+
+Pré-ordem:
+Em ordem :
+Pós-ordem:
