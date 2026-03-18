@@ -20,7 +20,7 @@ int main()
 
 	desenheArvore(raiz, 'B'); // Desenho de rvore binria de Busca
 
-	/* printf("\n\nPercurso em-ordem:\n");
+	printf("\n\nPercurso em-ordem:\n");
 	emOrdem_ArvBin(raiz);
 
 	printf("\n\nPercurso em pre-ordem:\n");
@@ -50,7 +50,7 @@ int main()
 	if (consulta_ArvBin(raiz, q, &info))
 		printf("Elemento %i encontrado na arvore!", info);
 	else
-		printf("Elemento %i NAO encontrado na arvore!", q); */
+		printf("Elemento %i NAO encontrado na arvore!", q);
 
 	// Consulta intervalar
 	int infoAchada, valorAnt, valorPost;
