@@ -4,30 +4,32 @@ using namespace std;
 #define _ ios_base::sync_with_stdio(0); cin.tie(0);
 #define endl '\n'
 
-typedef long long ll;
-const int MAX = 10e5 + 10;
+typedef long long int ll;
+const ll MAX = 10e5 + 10;
 
 void solve()
 {
-    unordered_map <ll, ll> mp[MAX];
+    unordered_map <ll, ll> mp;
+    array
     int n; cin >> n;
     
-
     ll count = 0;
 
-    for (int i = 0; i < MAX; i++) {
+    for (int i = 0; i < n; i++) {
         ll x; cin >> x;
         mp[x] += 1;
     }
 
-    for (int i=1; i<=n; i++) {
-        ll x; cin >> x;
-
-        if (mp[x] <= x) mp[x] += 1;
-        else count++;
+    for (int i=1; i<=MAX; i++) {
+        if (mp[i] == 0) {
+            continue;
+        }
+        cout << mp[i] << " ";
+        if (mp[i] < i) count += mp[i];
+        else count += mp[i] - i;
     }
 
-    cout << count;
+    cout <<  endl << count;
 }
 
 int main()
