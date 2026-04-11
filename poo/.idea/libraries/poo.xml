@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="poo">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/poo-exe1-pessoa-GustavoCardosoCosta.zip!/" />
+      <root url="jar://$PROJECT_DIR$/poo-exe2-produto-GustavoCardosoCosta.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
