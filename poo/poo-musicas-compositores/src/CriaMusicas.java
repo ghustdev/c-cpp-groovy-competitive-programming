@@ -13,6 +13,11 @@ public class CriaMusicas {
 		mu1.addCompositor(comp2);
 		mu1.addCompositor(comp3);
 		
+		Teste teste1 = new Teste();
+		teste1.teste = "Teste";
+		
+		teste1.testar();
+		
 		mu1.compositoresList().forEach(
 			compositor -> System.out.println(compositor.getName() + " - " + compositor.getCountry())
 		);
