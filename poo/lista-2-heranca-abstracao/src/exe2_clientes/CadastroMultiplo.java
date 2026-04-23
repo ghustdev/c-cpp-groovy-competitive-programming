@@ -1,4 +1,4 @@
-package exe2_clientes_1;
+package exe2_clientes;
 
 public class CadastroMultiplo {
 	
