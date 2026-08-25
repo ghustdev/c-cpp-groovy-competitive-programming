@@ -1,7 +1,8 @@
+// Lampions League
+
 #include <bits/stdc++.h>
 using namespace std;
 
-// --- STL ---
 typedef long long ll;
 // typedef pair<int, int>; pii;
 // typedef vector<pair<int, int>> vpii;
@@ -19,17 +20,12 @@ typedef long long ll;
 void solve() {
     int n; cin >> n;
 
-    int abslut;
+    int absolute;
 
-    if (n == 1) abslut = 1;
-    else if (n == 2) abslut = 1;
-    else if (n%2==0) 
-        abslut = abs(((2 + n)*(n/2)/2) - ((n*(n-1)/2)/2));
-    else 
-        abslut = abs(((1 + n)*((n + 1)/2)/2) - ((1 + n)*((n-1)/2)/2));
+    if (n%2==0) absolute = n/2;
+    else absolute = (n+1)/2;
 
-    string out =  abslut % 2 == 0 ? "PAR" : "IMPAR";
-    cout << out;
+    absolute % 2 == 0 ? cout << "PAR" : cout << "IMPAR";
 }
 
 
