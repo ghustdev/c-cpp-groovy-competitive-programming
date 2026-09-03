@@ -1,4 +1,4 @@
-// Lampions League
+// The Brega Game
 
 #include <bits/stdc++.h>
 using namespace std;
